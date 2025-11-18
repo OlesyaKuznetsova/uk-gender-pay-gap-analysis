@@ -1,0 +1,11 @@
+EmployerName,ReportStatus,NumberOfEmployees,GenderPayGap_HourlyPay_Mean_Percent,GenderPayGap_HourlyPay_Median_Percent,WomenInEachPayQuarter_Lower_Percent,WomenInEachPayQuarter_LowerMiddle_Percent,WomenInEachPayQuarter_UpperMiddle_Percent,WomenInEachPayQuarter_Upper_Percent,WhoReceivesBonusPay_Women_Percent,WhoReceivesBonusPay_Men_Percent,GenderPayGap_BonusPay_Mean_Percent,GenderPayGap_BonusPay_Median_Percent,Year,EmployerName_norm,Sector
+ARM LIMITED,Submitted,1000 to 4999,22.6,23.4,33.0,23.0,18.0,10.0,77.0,79.0,26.3,37.3,2021-22,ARM LIMITED,Tech
+ARM LIMITED,Submitted,1000 to 4999,23.8,22.5,35.2,23.0,17.9,9.7,70.9,78.7,26.0,34.6,2020-21,ARM LIMITED,Tech
+ARM LIMITED,Submitted,1000 to 4999,19.92,21.97,33.42,24.6,19.22,10.48,100.0,100.0,26.12,28.78,2022-23,ARM LIMITED,Tech
+MONZO BANK LIMITED,Submitted,500 to 999,19.3,20.4,51.1,46.2,47.4,26.1,17.0,13.8,-18.9,0.0,2019-20,MONZO BANK LIMITED,Tech
+GOOGLE UK LIMITED,Submitted,1000 to 4999,19.0,20.0,51.0,38.0,24.0,21.0,97.0,97.0,48.0,30.0,2018-19,GOOGLE UK LIMITED,Tech
+GOOGLE UK LIMITED,Submitted,"5000 to 19,999",18.0,19.0,50.0,40.0,26.0,21.0,97.0,97.0,52.0,35.0,2019-20,GOOGLE UK LIMITED,Tech
+GOOGLE UK LIMITED,Submitted,"5000 to 19,999",17.0,18.0,51.0,38.0,28.0,21.0,96.0,97.0,51.0,39.0,2020-21,GOOGLE UK LIMITED,Tech
+ARM LIMITED,Submitted,1000 to 4999,18.08,17.91,28.87,23.8,17.04,10.72,86.16,91.41,29.0,31.54,2023-24,ARM LIMITED,Tech
+ARM LIMITED,Submitted,1000 to 4999,17.33,17.41,28.57,23.26,17.29,11.19,83.71,88.32,31.07,30.23,2024-25,ARM LIMITED,Tech
+ARM LIMITED,Submitted,1000 to 4999,16.8,16.9,30.0,19.0,15.0,12.0,67.0,77.0,31.2,27.5,2018-19,ARM LIMITED,Tech
