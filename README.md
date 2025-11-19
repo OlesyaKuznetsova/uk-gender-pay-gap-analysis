@@ -55,7 +55,7 @@ The Tech sector keeps a higher pay gap across all years. Healthcare shows a clea
 
 2. Heatmap of Employers
 
-![heatmap](data/processed/heatmap.png.png)
+![heatmap](data/processed/heatmap.png)
 
 Each row is one employer and each column is a year.
 Darker red means a bigger pay gap.
