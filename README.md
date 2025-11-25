@@ -1,4 +1,4 @@
-            UK Gender Pay Gap Analysis
+UK Gender Pay Gap Analysis
 
 This project explores the gender pay gap in the UK for a selected group of employers from the Tech and Healthcare sectors.
 The goal was to load the data, clean it, join yearly files into one dataset, add a sector column and create simple visual analysis to compare the two industries.
@@ -10,17 +10,25 @@ https://gender-pay-gap.service.gov.uk/compare-employers/2024
 On this website you can:
 
 • choose any reporting year
+
 • select specific companies
+
 • download CSV files with full employer reports
 
 This project uses seven reporting years:
 
 • 2018–19
+
 • 2019–20
+
 • 2020–21
+
 • 2021–22
+
 • 2022–23
+
 • 2023–24
+
 • 2024–25
 
 Raw files are stored in:
@@ -28,37 +36,38 @@ Raw files are stored in:
 
 Each file contains official pay gap reports submitted by employers.
 From these files, only selected Tech companies and Healthcare organisations were used.
-All raw files are stored in data/raw/.
+All raw files are stored in 
+   data/raw/.
 A combined and cleaned dataset is stored in:
-data/processed/combined_with_sector.csv
+   data/processed/combined_with_sector.csv
 
    What I Did in This Project
 
 - Data Preparation
 
-   1. Loads all yearly CSV files
+1. Loads all yearly CSV files
 
-   2. Combines them into one dataframe
+2. Combines them into one dataframe
 
-   3. Cleans employer names
+3. Cleans employer names
 
-   4. Adds a Sector column (Tech or Healthcare)
+4. Adds a Sector column (Tech or Healthcare)
 
-   5. Saves a final processed CSV file
+5. Saves a final processed CSV file
 
 - Analysis & Visualisations
 
-   1. Shows gender pay gap trends over time
+1. Shows gender pay gap trends over time
 
-   2. Builds a heatmap for all employers
+2. Builds a heatmap for all employers
 
-   3. Compares sectors using a boxplot
+3. Compares sectors using a boxplot
 
-   4. Identifies the best and worst employers
+4. Identifies the best and worst employers
 
-   5. Runs a statistical test (t-test)
+5. Runs a statistical test (t-test)
 
-   6. Saves all charts automatically
+6. Saves all charts automatically
 
 
 Visualisations
@@ -96,9 +105,9 @@ A Welch two-sample t-test was used to check if the difference between sectors is
 
 Result:
 
-t = 4.33
+  t = 4.33
 
-p < 0.001
+  p < 0.001
 
 Meaning:
 The difference is statistically significant.
@@ -128,7 +137,7 @@ You can use this tool with your own CSV files.
 The code is designed so that you only need to change two lines.
 
 1. Place your CSV files in the folder:
-data/raw/
+   data/raw/
 
 
 Your files must be yearly gender pay gap CSVs downloaded from the official website.
@@ -137,8 +146,8 @@ Your files must be yearly gender pay gap CSVs downloaded from the official websi
 
 At the top of the script you will see:
 
-TECH_COMPANIES = [ ... ]
-HEALTHCARE_COMPANIES = [ ... ]
+    TECH_COMPANIES = [ ... ]
+    HEALTHCARE_COMPANIES = [ ... ]
 
 
 You can replace these lists with your own companies.
@@ -148,7 +157,7 @@ Names must match exactly how they appear in your CSV files.
 
 In your terminal:
 
-  python3 full_analysis.py
+    python3 full_analysis.py
 
 
 Before running, the script will ask:
