@@ -171,7 +171,9 @@ Press y to continue.
 After running, the script creates:
 
 • A cleaned combined CSV
+
 • Updated CSVs for best/worst employers
+
 • Three visualisations:
 
     plot_trends_v2.png
