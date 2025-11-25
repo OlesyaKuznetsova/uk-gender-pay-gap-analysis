@@ -83,7 +83,7 @@ Some Healthcare organisations stay low or even near zero.
 
 3. Sector Boxplot
 
-![boxplot](data/processed/plot_boxplot.png)
+![boxplot](data/processed/plot_boxplot_v2.png)
 
 Explanation:
 This chart compares the distribution of pay gaps between sectors.
