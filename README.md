@@ -33,12 +33,11 @@ This project uses seven reporting years:
 
 Raw files are stored in:
 
-
-Each file contains official pay gap reports submitted by employers.
-From these files, only selected Tech companies and Healthcare organisations were used.
-All raw files are stored in 
     data/raw/
-A combined and cleaned dataset is stored in:
+
+
+The combined and cleaned dataset is stored in:
+
     data/processed/combined_with_sector.csv
 
    What I Did in This Project
