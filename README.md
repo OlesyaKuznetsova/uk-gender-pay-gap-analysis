@@ -1,26 +1,30 @@
-UK Gender Pay Gap Analysis
+            UK Gender Pay Gap Analysis
 
 This project explores the gender pay gap in the UK for a selected group of employers from the Tech and Healthcare sectors.
 The goal was to load the data, clean it, join yearly files into one dataset, add a sector column and create simple visual analysis to compare the two industries.
 
-Data Sources
+All datasets come from the official UK Government Gender Pay Gap service:
 
-The datasets come from the UK Government Gender Pay Gap Service.
-The original CSV files were downloaded for seven reporting years:
+https://gender-pay-gap.service.gov.uk/compare-employers/2024
 
-2018 to 2019
+On this website you can:
 
-2019 to 2020
+• choose any reporting year
+• select specific companies
+• download CSV files with full employer reports
 
-2020 to 2021
+This project uses seven reporting years:
 
-2021 to 2022
+• 2018–19
+• 2019–20
+• 2020–21
+• 2021–22
+• 2022–23
+• 2023–24
+• 2024–25
 
-2022 to 2023
+Raw files are stored in:
 
-2023 to 2024
-
-2024 to 2025
 
 Each file contains official pay gap reports submitted by employers.
 From these files, only selected Tech companies and Healthcare organisations were used.
@@ -28,74 +32,146 @@ All raw files are stored in data/raw/.
 A combined and cleaned dataset is stored in:
 data/processed/combined_with_sector.csv
 
-What I Did in This Project
+   What I Did in This Project
 
-Loaded all yearly datasets.
+- Data Preparation
 
-Cleaned the columns and combined them into one table.
+   1. Loads all yearly CSV files
 
-Added a new column Sector (Tech or Healthcare).
+   2. Combines them into one dataframe
 
-Built visualisations to show trends and compare both sectors.
+   3. Cleans employer names
 
-Found the best and worst employers (lowest and highest gender pay gaps).
+   4. Adds a Sector column (Tech or Healthcare)
 
-Ran a statistical test to check if the difference between the sectors is real.
+   5. Saves a final processed CSV file
 
-Visual Analysis
+- Analysis & Visualisations
 
-Below are short explanations for each visual.
+   1. Shows gender pay gap trends over time
 
-1. Trends Over Time
+   2. Builds a heatmap for all employers
 
-![trend](data/processed/gender_pay_gap_trends.png)
+   3. Compares sectors using a boxplot
 
-This line chart shows how the median hourly gender pay gap changed from 2018 to 2025.
-The Tech sector keeps a higher pay gap across all years. Healthcare shows a clear decrease over time.
+   4. Identifies the best and worst employers
 
-2. Heatmap of Employers
+   5. Runs a statistical test (t-test)
 
-![heatmap](data/processed/heatmap.png)
+   6. Saves all charts automatically
 
-Each row is one employer and each column is a year.
-Darker red means a bigger pay gap.
-We can see that Tech companies like ARM and Google have consistently stronger gaps.
-Healthcare employers are more stable and often show lower values.
 
-3. Boxplot by Sector
+Visualisations
+1. Gender Pay Gap Trends (2018–2025) 
 
-![boxplot](data/processed/median_hourly_pay_gap.png)
+![trend](data/processed/plot_trends_v2.png)
 
-The boxplot makes the difference between sectors clear.
-The Tech sector has higher median values and a wider spread.
-Healthcare has lower gaps and less variation.
+Explanation:
+This line chart shows how the median hourly pay gap changes over time.
+Tech companies keep higher gap values every year.
+Healthcare shows a clear decrease after 2021.
 
-Statistical Test
+2. Employer Heatmap
 
-I used a two-sample t-test (Welch version) to check if Tech and Healthcare are truly different.
+![heatmap](data/processed/plot_heatmap_v2.png) 
+
+Explanation:
+Each row is an employer, each column is a reporting year.
+Red colours = higher gaps.
+We can see companies like ARM and Google stay high across all years.
+Some Healthcare organisations stay low or even near zero.
+
+3. Sector Boxplot
+
+![boxplot](data/processed/plot_boxplot.png)
+
+Explanation:
+This chart compares the distribution of pay gaps between sectors.
+Tech has higher values and more variation.
+Healthcare is lower and more stable.
+
+   Statistical Test (t-test)
+
+A Welch two-sample t-test was used to check if the difference between sectors is real.
+
 Result:
 
 t = 4.33
 
 p < 0.001
 
-This means the difference is statistically significant.
-In simple words, Tech really has a higher gender pay gap than Healthcare and this is not random.
+Meaning:
+The difference is statistically significant.
+Tech has a higher gender pay gap than Healthcare, and this is not random.
 
-Main Findings
+   Key Findings
 
-The Tech sector shows consistently higher pay gaps every year.
+Tech sector consistently reports higher gender pay gaps
 
-Healthcare shows improvement over time, especially after 2021.
+Healthcare shows improvement, especially after 2021
 
-Some Tech employers repeatedly appear at the top of the list with large gaps.
+Some Tech companies show very high gaps across all years
 
-Some Healthcare organisations even report slightly negative gaps.
+Some Healthcare employers report low or even negative gaps
 
-The statistical test confirms that the difference between Tech and Healthcare is real.
+Statistical testing confirms the sectors are meaningfully different
 
-Short Conclusion
+   Short Conclusion
 
-The gender pay gap in the UK remains higher in the Tech sector than in Healthcare.
-This pattern is visible in the visuals and confirmed by statistical testing.
-Healthcare employers show more positive progress, while the Tech sector still has persistent gaps that do not fully improve across the years.
+The gender pay gap remains noticeably higher in the Tech sector than in Healthcare.
+Healthcare shows strong positive trends, while the Tech sector shows slow or limited improvement.
+The difference is strong enough to be statistically confirmed.
+
+???  How to Use This Script (full_analysis.py)
+
+You can use this tool with your own CSV files.
+The code is designed so that you only need to change two lines.
+
+1. Place your CSV files in the folder:
+data/raw/
+
+
+Your files must be yearly gender pay gap CSVs downloaded from the official website.
+
+2. (Optional) Update company lists
+
+At the top of the script you will see:
+
+TECH_COMPANIES = [ ... ]
+HEALTHCARE_COMPANIES = [ ... ]
+
+
+You can replace these lists with your own companies.
+Names must match exactly how they appear in your CSV files.
+
+3. Run the script
+
+In your terminal:
+
+  python3 full_analysis.py
+
+
+Before running, the script will ask:
+
+Are you sure you are using the correct raw data files? (y/n):
+
+
+Press y to continue.
+
+4. Outputs
+
+After running, the script creates:
+
+• A cleaned combined CSV
+• Updated CSVs for best/worst employers
+• Three visualisations:
+
+    plot_trends_v2.png
+    plot_heatmap_v2.png
+    plot_boxplot_v2.png
+
+All results are saved into:
+
+data/processed/
+
+
