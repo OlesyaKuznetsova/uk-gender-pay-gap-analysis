@@ -37,9 +37,9 @@ Raw files are stored in:
 Each file contains official pay gap reports submitted by employers.
 From these files, only selected Tech companies and Healthcare organisations were used.
 All raw files are stored in 
-   data/raw/.
+    data/raw/
 A combined and cleaned dataset is stored in:
-   data/processed/combined_with_sector.csv
+    data/processed/combined_with_sector.csv
 
    What I Did in This Project
 
@@ -105,9 +105,9 @@ A Welch two-sample t-test was used to check if the difference between sectors is
 
 Result:
 
-  t = 4.33
+    t = 4.33
 
-  p < 0.001
+    p < 0.001
 
 Meaning:
 The difference is statistically significant.
@@ -137,7 +137,7 @@ You can use this tool with your own CSV files.
 The code is designed so that you only need to change two lines.
 
 1. Place your CSV files in the folder:
-   data/raw/
+    data/raw/
 
 
 Your files must be yearly gender pay gap CSVs downloaded from the official website.
@@ -181,6 +181,6 @@ After running, the script creates:
 
 All results are saved into:
 
-data/processed/
+    data/processed/
 
 
